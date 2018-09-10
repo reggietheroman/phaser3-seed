@@ -1,0 +1,34 @@
+{
+  "name": "phaser3-seed",
+  "version": "1.0.0",
+  "description": "This project is an application skeleton for a Phaser3 application using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run copyJs && npm run copyHtml",
+    "copyApp": "copyfiles -u 1 ./app/app.js public/js",
+    "copyHtml": "copyfiles -u 1 ./app/index.html public",
+    "copyJs": "npm run copyApp && npm run copyPhaser",
+    "copyPhaser": "copyfiles -u 3 ./node_modules/phaser/dist/*.min.js public/js",
+    "start": "./node_modules/http-server/bin/http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reggietheroman/phaser3-seed.git"
+  },
+  "keywords": [
+    "phaser3",
+    "nodejs"
+  ],
+  "author": "Reggie Bigornia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reggietheroman/phaser3-seed/issues"
+  },
+  "homepage": "https://github.com/reggietheroman/phaser3-seed#readme",
+  "dependencies": {
+    "copyfiles": "^2.1.0",
+    "http-server": "^0.11.1",
+    "phaser": "^3.12.0"
+  }
+}
